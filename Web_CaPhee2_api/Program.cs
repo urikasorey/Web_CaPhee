@@ -14,7 +14,6 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IContactRepository, ContactRepository>();
-
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>(ShoppingCartRepository.GetCart);
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddDbContext<CoffeeshopApiDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopApiDbContextConnection")));
